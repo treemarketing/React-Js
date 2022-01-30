@@ -1,12 +1,11 @@
-import {Producto} from '../components/producto';
+import {ItemListContainer} from '../components/ItemListContainer/ItemListContainer';
 
 
 export const MainContent = () => {
 return( 
     <main>
       
-    <h2>HOLA QUE ONDA ESTO? </h2>
-    <Producto/>
+    <ItemListContainer greeting="Hola Coders!"/>
 
     </main> 
 )
