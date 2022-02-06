@@ -1,0 +1,46 @@
+
+[{
+    "id" : 4,
+    "name" : "Combo Cono",
+    "info" : "cono de papas fritas con una porción de pollo a elección",
+    "imgRoute" : "img/burgerItem/bigMc.png",
+    "price" : 390
+}, {
+    "id" : 5,
+    "name" : "Combo Balde",
+    "info" : " Medio balde de papas fritas más 2 porciones de pollo a elección",
+    "imgRoute" : "img/burgerItem/cuartoDeLibra.png",
+    "price" : 890
+}, {
+    "id" : 6,
+    "name" : "Pollo Crispy",
+    "info" : " 6 piezas de pollo crujiente con cereales.",
+    "imgRoute" : "img/burgerItem/mcPollo.png",
+    "price" : 450
+}, {
+    "id" : 7,
+    "name" : "Finger Crispy",
+    "info" : "10 tiras de pollo crujiente con cereales.",
+    "imgRoute" : "img/burgerItem/mcnifica.png",
+    "price" : 450
+}, {
+    "id" : 8,
+    "name" : "Buffalos Wings",
+    "info" : "10 Piezas de Alitas de pollo con salsa picante.",
+    "imgRoute" : "img/burgerItem/mcduo.png",
+    "price" : 450
+    
+    
+}, {
+    "id" : 9,
+    "name" : "12 Empanadas",
+    "price" : 550,
+    "info" : "Docena de empanadas fritas.",
+    "imgRoute" : "img/burgerItem/bacon.png"
+}, {
+    "id" : 10,
+    "name" : "Miss. Papas",
+    "price" : 170,
+    "info" : "Porción de papas fritas.",
+    "imgRoute" : "img/burgerItem/bacon.png"
+}]
