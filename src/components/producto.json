@@ -1,20 +1,23 @@
+
+
+
 [{
     "id" : 1,
     "nombre" : "Combo Cono",
     "info" : "cono de papas fritas con una porción de pollo a elección",
-    "imgRoute" : "../img/cono.jpg",
+    "imgRoute" : "./img/balde.jpg",
     "precio" : 390
 }, {
     "id" : 2,
     "nombre" : "Combo Balde",
     "info" : " Medio balde de papas fritas más 2 porciones de pollo a elección",
-    "imgRoute" : "./img/cuartoDeLibra.png",
+    "imgRoute" : "./img/balde.jpg",
     "precio" : 890
 }, {
     "id" : 3,
     "nombre" : "Pollo Crispy",
     "info" : " 6 piezas de pollo crujiente con cereales.",
-    "imgRoute" : "./img/mcPollo.png",
+    "imgRoute" : "./img/pollo-crispy.jpg",
     "precio" : 450
 }, {
     "id" : 4,

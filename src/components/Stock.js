@@ -1,5 +1,9 @@
 import {useEffect, useState} from 'react';
 import stockJson from './producto.json'
+import {stockJs} from "./producto.js"
+
+
+
 
 
 
@@ -52,8 +56,7 @@ export function Stock(){
   }, [cart])
 */
 useEffect(() => {
-  getPromise(stockJson).then( result => {
-    console.log(result)
+  getPromise(stockJs).then( result => {
     setProducts(result)
   })
   
@@ -68,9 +71,11 @@ useEffect(() => {
         products.map(product => (
           <>
           <article key={product.id}>
-          <h5>{product.nombre}</h5>
-          <p>{product.precio}</p>
-          <img src={product.imgRoute}/>
+          <h2>{product.nombre}</h2>
+          <h5>{product.desc}</h5>
+          <h3>$ {product.precio}</h3>
+          <img style={{ width:'20%' }}src={product.imgRoute} alt={product.nombre}/>
+          <br />
           <button onClick={() => agregarAlCarrito(product.id)}>Agregar al carrito</button>
           </article>
           <hr/>
