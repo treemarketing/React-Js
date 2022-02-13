@@ -5,7 +5,7 @@ export const MainContent = () => {
 return( 
     <main>
       
-    <ItemListContainer greeting="Hola Coders!"/>
+    <ItemListContainer/>
 
     </main> 
 )
