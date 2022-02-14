@@ -1,43 +1,50 @@
 import {useEffect, useState} from 'react';
 import {ItemList} from './itemList'
-import {stockJs} from "../producto"
 import {useParams } from 'react-router-dom';
+import { pedirDatos } from '../pedirDatos';
 
 export const ItemListContainer = () => {
 
-  const {categoryid} = useParams()
-  console.log(categoryid)
-    //hook
-    const [products, setProducts] = useState([])
+  const { catId } = useParams()
+console.log(catId)
 
-    //simulo carga servidor
-    const getPromise = (stock) => {
-        return new Promise((resolve, reject) => {
-          setTimeout(() => {
-            return resolve(stock)
-          },3000)
-        })
-      }
+    //hook
+    const [productos, setProductos] = useState([])
+    const [loading, setLoading] = useState(false)
+  
 
 
 //uso la promesa 
     useEffect(() => {
-        getPromise(stockJs).then( result => {
-          if(categoryid){
-          //realizo filtrado para poder usar useParams y obtener una ruta dinamica
-         const filtrado = result.filter((tipo) => tipo.categoria === categoryid);
-         setProducts(filtrado)
-        }else{
-          setProducts(result)
-        }
-        })
+        setLoading(true)
+        
+        pedirDatos()
+        .then((res) => {
+          if (catId) {
+              setProductos( res.filter((el) => el.categoria === catId ) )
+          } else {
+              setProductos(res)
+          }
+      })
+      .catch((err) => {
+          console.log(err)
+      })
+      .finally(() => {
+         setLoading(false)
+      })
 
-       }, [])
+       }, [catId])
 //products que habia mapeado lo exporto
 return( 
   
+    
     <>
-    <ItemList products={products}/>
+    {
+        loading
+        ? <h2>Cargando.... </h2>
+        : <ItemList productos={productos}/>
+    }
     </>
+  
 )
 }

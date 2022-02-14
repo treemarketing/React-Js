@@ -59,7 +59,7 @@ export const stockJs = () => {
     imgRoute : "./img/bacon.png",
     precio : 170,
     stock : 10,
-    categoria: "Papas Fritas"
+    categoria: "papas"
 }]
 )
 }  

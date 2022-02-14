@@ -18,12 +18,13 @@ return (
       <Nav.Link href="/contacto">Contacto</Nav.Link>
       <NavDropdown title="Productos" id="basic-nav-dropdown">
           <NavDropdown.Item href="/productos">Todos</NavDropdown.Item>
-          <NavDropdown.Item href="#action/3.2">Pollo</NavDropdown.Item>
-          <NavDropdown.Item href="#action/3.3">Papas Fritas</NavDropdown.Item>
-          <NavDropdown.Item href="#action/3.3">Empanadas</NavDropdown.Item>
+          <NavDropdown.Item href='/productos/pollo'>Pollo</NavDropdown.Item>
+          <NavDropdown.Item href='/productos/papas'>Papas Fritas</NavDropdown.Item>
+          <NavDropdown.Item href='/productos/empanadas'>Empanadas</NavDropdown.Item>
           <NavDropdown.Divider />
-          <NavDropdown.Item href="#action/3.4">Combos</NavDropdown.Item>
+          <NavDropdown.Item href='/productos/combos'>Combos</NavDropdown.Item>
         </NavDropdown>
+        <Nav.Link href="/productos2">prueba productos</Nav.Link>
     </Nav>
     <CartWidget />
     </Container>
