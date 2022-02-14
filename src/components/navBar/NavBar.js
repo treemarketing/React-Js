@@ -11,7 +11,7 @@ return (
 <>
   <Navbar bg="dark" variant="dark">
     <Container>
-    <Link to='/'><img className='logo'src={logo}/></Link>
+    <Link to='/'><img className='logo'src={logo} alt="logo"/></Link>
     <Navbar.Brand> <Link to={'/'}>Hey Papas!</Link></Navbar.Brand>
     <Nav className="me-auto">
       <Nav.Link href="/">Inicio</Nav.Link>

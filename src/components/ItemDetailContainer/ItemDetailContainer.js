@@ -16,8 +16,6 @@ export const ItemDetailContainer =() => {
   const [item, setItem] = useState(null)
   
   const { itemId } = useParams()
-  console.log(itemId)
-  console.log(item)
  
 
 
@@ -27,9 +25,8 @@ useEffect(() => {
   setLoading(true)
 
     pedirDatos()
-    .then((res) => {
-        const encontrado = res.find((el) => el.id === Number(itemId))
-        console.log(setItem(encontrado))
+      .then((res) => {
+      setItem( res.find((el) => el.id === Number(itemId)) )
       })
       .finally(() => {
         setLoading(false)

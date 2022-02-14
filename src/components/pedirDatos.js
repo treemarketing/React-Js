@@ -6,9 +6,9 @@ import {stockJs} from "./producto.js";
 
   //simulo carga servidor
   export const pedirDatos = () => {
-    return new Promise((resolve, reject) => {
+    return new Promise( (resolve, reject) => {
       setTimeout(() => {
-        return resolve(stockJs)
-      },3000)
+        resolve(stockJs)
+      }, 3000)
     })
   }

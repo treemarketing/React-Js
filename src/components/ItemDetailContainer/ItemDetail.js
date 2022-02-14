@@ -8,13 +8,13 @@
 export const ItemDetail = ({id, nombre, desc, precio, imgRoute, stock, categoria}) => {
 
     return( 
-        <section>
+        <div>
         <h2>{nombre}</h2>
         <img src={imgRoute} alt={desc}/>
         <p>{desc}</p>
         <h5>Precio:$ {precio}</h5>
     
-        </section> 
+        </div> 
     )
     }   
     
