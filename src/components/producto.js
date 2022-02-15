@@ -1,6 +1,12 @@
 import img1 from "./img/cono.jpg"
 import img2 from "./img/balde.jpg"
 import img3 from "./img/pollo-crispy.jpg"
+import img4 from "./img/pollo-finger.jpg"
+import img5 from "./img/pollo-buffalo.jpg"
+import img6 from "./img/empanadas12.jpg"
+import img7 from "./img/papas.jpg"
+import img8 from "./img/pollo-nuggets.jpg"
+import img9 from "./img/empanadas6.jpg"
 
 
 
@@ -34,7 +40,7 @@ export const stockJs =
     id : 4,
     nombre : "Finger Crispy",
     desc : "10 tiras de pollo crujiente con cereales.",
-    imgRoute : 'https://via.placeholder.com/150',
+    imgRoute : img4,
     precio : 450,
     stock : 10,
     categoria: "pollo"
@@ -42,7 +48,7 @@ export const stockJs =
     id : 5,
     nombre : "Buffalos Wings",
     desc : "10 Piezas de Alitas de pollo con salsa picante.",
-    imgRoute : 'https://via.placeholder.com/150',
+    imgRoute : img5,
     precio : 450, 
     stock : 10,
     categoria: "pollo"
@@ -50,7 +56,7 @@ export const stockJs =
     id : 6,
     nombre : "12 Empanadas",
     desc : "Docena de empanadas fritas.",
-    imgRoute : 'https://via.placeholder.com/150',
+    imgRoute : img6,
     precio : 550,
     stock : 10,
     categoria: "empanadas"
@@ -58,9 +64,25 @@ export const stockJs =
     id : 7,
     nombre : "Miss. Papas",
     desc : "Porción de papas fritas.",
-    imgRoute : 'https://via.placeholder.com/150',
+    imgRoute : img7,
     precio : 170,
     stock : 10,
     categoria: "papas"
+}, {
+    id : 8,
+    nombre : "Nuggets de Pollo",
+    desc : "Nuggets crujientes de pollo",
+    imgRoute : img8,
+    precio : 450,
+    stock : 10,
+    categoria: "pollo"
+},{
+    id : 9,
+    nombre : "6 empanadas",
+    desc : "Media docena de empanadas de pollo o carne.",
+    imgRoute : img9,
+    precio : 400,
+    stock : 10,
+    categoria: "empanadas"
 }]
 

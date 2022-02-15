@@ -11,7 +11,7 @@ export const Item = ({id,nombre,desc,precio,imgRoute,categoria}) => {
 
     return( 
         <section>
-           <Card style={{ width: '18rem' }}>
+           <Card style={{ width: '22rem' }}>
   <Card.Img variant="top" src={imgRoute} />
   <Card.Body>
   <Card.Title>Categoria: {categoria}</Card.Title>

@@ -10,10 +10,10 @@ import {stockJs} from "./producto.js"
 
 
 
-const getPromise = (stock) => {
+const getPromise = (stockJson) => {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
-      return resolve(stock)
+      return resolve(stockJson)
     },3000)
   })
 }
@@ -56,7 +56,7 @@ export function Stock(){
   }, [cart])
 */
 useEffect(() => {
-  getPromise(stockJs).then( result => {
+  getPromise(stockJson).then( result => {
     setProducts(result)
   })
   
@@ -74,7 +74,7 @@ useEffect(() => {
           <h2>{product.nombre}</h2>
           <h5>{product.desc}</h5>
           <h3>$ {product.precio}</h3>
-          <img style={{ width:'20%' }}src={product.imgRoute} alt={product.nombre}/>
+          <img style={{ width:'20%' }}src={product.images} alt={product.nombre}/>
           <br />
           <button onClick={() => agregarAlCarrito(product.id)}>Agregar al carrito</button>
           </article>

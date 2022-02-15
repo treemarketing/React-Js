@@ -41,7 +41,7 @@ console.log(productos)
         <>
             {
                 loading 
-                    ? <h2>Loading...</h2> 
+                    ? <h2>Cargando..</h2> 
                     : <ItemList productos={productos}/>
             } 
         </>

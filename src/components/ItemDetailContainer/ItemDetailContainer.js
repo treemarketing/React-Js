@@ -26,14 +26,13 @@ useEffect(() => {
 
     pedirDatos()
       .then((res) => {
-        console.log(res)
       setItem( res.find((el) => el.id === Number(itemId)) )
       })
       .finally(() => {
         setLoading(false)
       })
 
-     }, [])
+     }, [itemId])
 
 
 
