@@ -8,13 +8,18 @@
 export const ItemDetail = ({id, nombre, desc, precio, imgRoute, stock, categoria}) => {
 
     return( 
-        <div>
+        <>
+        
         <h2>{nombre}</h2>
+        <div className="itemDetail">
         <img src={imgRoute} alt={desc}/>
+        </div>
+        <div>
         <p>{desc}</p>
-        <h5>Precio:$ {precio}</h5>
+        <h2>Precio:$ {precio}</h2>
     
         </div> 
+        </>
     )
     }   
     

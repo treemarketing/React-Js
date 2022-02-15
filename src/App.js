@@ -1,6 +1,6 @@
 
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './App.css';
+import './styles/global.scss';
 import { Header } from './components/header'
 import { Stock } from './components/Stock.js'
 import { PokeApi } from './components/poketapi/PokeApi'

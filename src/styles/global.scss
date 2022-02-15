@@ -1,0 +1,74 @@
+@import './variables';
+@import './titulos';
+
+*{  box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-color: $color-bg;
+}
+
+
+ol li{
+    background-color: $color-texto2;
+    color: $color-llamada;
+}
+
+a {
+    text-decoration: none;
+}
+
+.itemDetail{
+    display:flex;
+    justify-content:center;
+}
+// .contenedor-logo{
+//     display: block;
+//     margin: auto;
+//     position: sticky;
+//     text-align: center;
+//     top: 40px;
+// }
+
+// .logo{
+//     display: flex;
+//     flex-wrap: wrap;
+//     flex-direction: column;
+//     align-items: center;
+// }
+
+// le doy formato al cards de boostrap
+
+
+    .card-body {
+        background-color: $color-llamada;
+        text-align: center;
+    }
+
+
+
+    .car-text{
+        p{color:white;}
+    }
+
+
+    .btn-primary{
+        background-color: $color-texto2;
+        border-radius: 30px;
+        
+        
+    }
+    .btn-primary:hover{
+        background-color: $color-bg;
+        
+    }
+
+    .list-group-item{
+        background-color: $color-bg;
+        text-align:center;
+        font-size:2rem;
+        color: white;
+    }
+    

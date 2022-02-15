@@ -11,15 +11,15 @@ export const Item = ({id,nombre,desc,precio,imgRoute,categoria}) => {
 
     return( 
         <section>
-           <Card style={{ width: '22rem' }}>
+           <Card style={{ width: '30rem' }}>
   <Card.Img variant="top" src={imgRoute} />
   <Card.Body>
-  <Card.Title>Categoria: {categoria}</Card.Title>
-    <Card.Title>{nombre}</Card.Title>
-    <Card.Text>
+  <Card.Title as="h6">Categoria: {categoria}</Card.Title>
+    <Card.Title as="h2">{nombre}</Card.Title>
+    <Card.Text as="h6">
       {desc}
     </Card.Text>
-    <Card.Text>
+    <Card.Text as="h6">
      Precio: $ {precio}
     </Card.Text>
     <Link to={`/detalle/${id}`}>
