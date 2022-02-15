@@ -12,10 +12,10 @@ import { pedirDatos } from '../pedirDatos';
 
 
 export const ItemDetailContainer =() => {
-  const [loading, setLoading] = useState(false)
-  const [item, setItem] = useState(null)
+  const [loading, setLoading] = useState(false);
+  const [item, setItem] = useState(null);
   
-  const { itemId } = useParams()
+  const { itemId } = useParams();
  
 
 
@@ -26,6 +26,7 @@ useEffect(() => {
 
     pedirDatos()
       .then((res) => {
+        console.log(res)
       setItem( res.find((el) => el.id === Number(itemId)) )
       })
       .finally(() => {

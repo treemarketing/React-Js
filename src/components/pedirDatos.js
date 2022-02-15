@@ -8,7 +8,8 @@ import {stockJs} from "./producto.js";
   export const pedirDatos = () => {
     return new Promise( (resolve, reject) => {
       setTimeout(() => {
-        resolve(stockJs)
+      return resolve(stockJs)
       }, 3000)
     })
   }
+  

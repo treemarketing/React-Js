@@ -4,8 +4,7 @@ import img3 from "./img/pollo-crispy.jpg"
 
 
 
-export const stockJs = () => {
-    return( 
+export const stockJs =    
 
 [{
     id : 1,
@@ -64,5 +63,4 @@ export const stockJs = () => {
     stock : 10,
     categoria: "papas"
 }]
-)
-}  
+

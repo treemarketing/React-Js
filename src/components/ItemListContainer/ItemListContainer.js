@@ -3,21 +3,26 @@ import {ItemList} from './itemList';
 import {useParams } from 'react-router-dom';
 import { pedirDatos } from '../pedirDatos';
 
+
 export const ItemListContainer = () => {
 
     
-    const [productos, setProductos] = useState([])
-    const [loading, setLoading] = useState(false)
+    const [productos, setProductos] = useState([]);
+    const [loading, setLoading] = useState(false);
 
-    const { catId } = useParams()
-
+    const { catId } = useParams();
+    console.log(catId)
+    
     useEffect( () => {
         setLoading(true)
 
-        pedirDatos()
+         pedirDatos()
+        
             .then((res) => {
-                if (catId) {
-                    setProductos( res.filter((el) => el.categoria === catId ) )
+                console.log(res)
+                if(catId) {
+                    const filtrados = res.filter(el => el.categoria === catId );
+                    setProductos(filtrados)
                 } else {
                     setProductos(res)
                 }
@@ -30,7 +35,7 @@ export const ItemListContainer = () => {
             })
 
     }, [catId])
-
+console.log(productos)
 
     return (
         <>
