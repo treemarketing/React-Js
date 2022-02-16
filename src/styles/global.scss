@@ -41,6 +41,14 @@ a {
 
 // le doy formato al cards de boostrap
 
+    .navBar{
+        background-color: $color-bg;
+    }
+    
+    .contador{
+        text-align: center;
+        color: white;
+    }
 
     .card-body {
         background-color: $color-llamada;

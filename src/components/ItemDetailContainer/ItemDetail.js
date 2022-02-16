@@ -1,4 +1,4 @@
-
+import {ItemCount } from "../ItemCount/ItemCount";
 
 
 
@@ -16,8 +16,8 @@ export const ItemDetail = ({id, nombre, desc, precio, imgRoute, stock, categoria
         </div>
         <div>
         <p>{desc}</p>
+        <ItemCount max={stock} />
         <h2>Precio:$ {precio}</h2>
-    
         </div> 
         </>
     )

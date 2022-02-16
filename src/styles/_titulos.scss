@@ -28,6 +28,9 @@ h3{
 h4{
     font-size: 2.5rem;
 }
+h6{
+    color:white;
+}
 p{
     @include font($color-texto,1.5rem ,center );
 }
