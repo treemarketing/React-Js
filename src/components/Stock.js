@@ -82,6 +82,7 @@ useEffect(() => {
           </>
         ))
       ):<p>No hay productos en la tienda</p>}
+      
       <h2>Mi Carrito</h2>
       {cart.length ? (
         cart.map(product => (

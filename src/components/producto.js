@@ -19,7 +19,8 @@ export const stockJs =
     imgRoute : img1,
     precio : 390,
     stock : 10,
-    categoria: "combo"
+    categoria: "combo",
+    oferta: false
 }, {
     id : 2,
     nombre : "Combo Balde",
@@ -27,7 +28,8 @@ export const stockJs =
     imgRoute : img2,
     precio : 890,
     stock : 10,
-    categoria: "combo"
+    categoria: "combo",
+    oferta: false
 }, {
     id : 3,
     nombre : "Pollo Crispy",
@@ -35,7 +37,8 @@ export const stockJs =
     imgRoute : img3,
     precio : 450,
     stock : 10,
-    categoria: "pollo"
+    categoria: "pollo",
+    oferta: false
 }, {
     id : 4,
     nombre : "Finger Crispy",
@@ -43,7 +46,8 @@ export const stockJs =
     imgRoute : img4,
     precio : 450,
     stock : 10,
-    categoria: "pollo"
+    categoria: "pollo",
+    oferta: true
 }, {
     id : 5,
     nombre : "Buffalos Wings",
@@ -51,7 +55,8 @@ export const stockJs =
     imgRoute : img5,
     precio : 450, 
     stock : 10,
-    categoria: "pollo"
+    categoria: "pollo",
+    oferta: false
 }, {
     id : 6,
     nombre : "12 Empanadas",
@@ -59,7 +64,8 @@ export const stockJs =
     imgRoute : img6,
     precio : 550,
     stock : 10,
-    categoria: "empanadas"
+    categoria: "empanadas",
+    oferta: false
 }, {
     id : 7,
     nombre : "Miss. Papas",
@@ -67,7 +73,8 @@ export const stockJs =
     imgRoute : img7,
     precio : 170,
     stock : 10,
-    categoria: "papas"
+    categoria: "papas",
+    oferta: false
 }, {
     id : 8,
     nombre : "Nuggets de Pollo",
@@ -75,7 +82,8 @@ export const stockJs =
     imgRoute : img8,
     precio : 450,
     stock : 10,
-    categoria: "pollo"
+    categoria: "pollo",
+    oferta: false
 },{
     id : 9,
     nombre : "6 empanadas",
@@ -83,6 +91,7 @@ export const stockJs =
     imgRoute : img9,
     precio : 400,
     stock : 10,
-    categoria: "empanadas"
+    categoria: "empanadas",
+    oferta: false
 }]
 

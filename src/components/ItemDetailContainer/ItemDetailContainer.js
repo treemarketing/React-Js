@@ -2,6 +2,8 @@ import {useEffect, useState} from 'react';
 import {useParams } from 'react-router-dom';
 import { ItemDetail } from "./ItemDetail";
 import { pedirDatos } from '../pedirDatos';
+import { getDoc, doc} from 'firebase/firestore';
+import { db } from '../firebase/config';
 
 
 
@@ -23,7 +25,13 @@ export const ItemDetailContainer =() => {
 
 useEffect(() => {
   setLoading(true)
+//vincular con FIREBASE
+//   const docRef = doc(db,"productos", itemId)
 
+// getDoc(docRef)
+//   .then(() =>{
+//     setItem({id: doc.id, ...doc.data()})
+//   })
     pedirDatos()
       .then((res) => {
       setItem( res.find((el) => el.id === Number(itemId)) )
