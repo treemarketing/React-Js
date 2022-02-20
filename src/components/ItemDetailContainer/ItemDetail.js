@@ -2,6 +2,7 @@ import {ItemCount } from "../ItemCount/ItemCount";
 import {useState, useContext} from 'react';
 import Button from 'react-bootstrap/Button'
 import { CartContext } from "../context/CartContext";
+import {Link} from "react-router-dom"
 
 
 
@@ -14,12 +15,16 @@ export const ItemDetail = ({id, nombre, desc, precio, imgRoute, stock, categoria
     const [cantidad, setCantidad] = useState(0)
     // const [cart, setCart] = useState([])  
     // const [products, setProducts] = useState([])
-    const { cart, agregarAlCarrito} = useContext(CartContext)
-    
+    const { cart, agregarAlCarrito, isInCart} = useContext(CartContext)
+    console.log(cart)
+
     const handleAgregar = () => {
         if (cantidad === 0) return
+        if (!isInCart(id)){
         const addItem =  {id, precio, nombre, stock, cantidad}
-        console.log(addItem)
+
+        agregarAlCarrito(addItem)
+        }
     }
   
     
@@ -44,9 +49,20 @@ export const ItemDetail = ({id, nombre, desc, precio, imgRoute, stock, categoria
         </div>
         <div>
         <p>{desc}</p>
-        <ItemCount max={stock} counter={cantidad} setCounter={setCantidad} handleAgregar={handleAgregar} />
         <h2>Precio:$ {precio}</h2>
-        <Button variant="danger" onClick={handleAgregar}>Agregar al carrito</Button>
+        {
+            isInCart(id)
+            ?
+            <Link to={"/cart"} className="btn btn-success my-3" >Terminar Mi Compra</Link>
+            :<>
+            <ItemCount max={stock} counter={cantidad} setCounter={setCantidad} handleAgregar={handleAgregar} />
+            <hr />
+            <div className="d-grid gap-2 col-4 mx-auto">
+            <Button variant="warning" onClick={handleAgregar}>Agregar al carrito</Button>
+            </div>
+            </>
+        }
+
         </div> 
         </>
     )

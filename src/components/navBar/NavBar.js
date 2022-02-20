@@ -1,5 +1,5 @@
 import { Navbar,Nav,Container,NavDropdown } from 'react-bootstrap';
-import { CartWidget } from './CartWidget';
+import { CartWidget } from './CartWidget/CartWidget';
 import {Link } from 'react-router-dom';
 import logo from '../navBar/img/logo.jpg';
 import './navBar.scss'

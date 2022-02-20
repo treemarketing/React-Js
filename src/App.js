@@ -13,14 +13,27 @@ import {CartContext} from "./components/context/CartContext"
 function App() {
 
 const [cart, setCart] = useState([])
+
 const agregarAlCarrito = (item) => {
   setCart([...cart, item])
 }
+
+///some retorna true o false en cambio find retorna el elemento
+
+const isInCart = (id) => {
+  return cart.some((prod) => prod.id ===id)
+}
+
+const cantidadCart = () => {
+  return cart.reduce((acc, prod) => acc + prod.cantidad, 0)
+}
+
+
   return (
 <>
   <CartContext.Provider value={
     {
-      cart, agregarAlCarrito}
+      cart, agregarAlCarrito, isInCart, cantidadCart}
       }>
 
   <BrowserRouter>
