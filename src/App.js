@@ -1,6 +1,7 @@
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles/global.scss';
+import { useState } from 'react';
 import { Header } from './components/header'
 import { Stock } from './components/Stock.js'
 import { PokeApi } from './components/poketapi/PokeApi'
@@ -8,12 +9,19 @@ import {ItemListContainer} from './components/ItemListContainer/ItemListContaine
 import {BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 import {Formulario} from "./components/Form/Form"
 import {ItemDetailContainer } from "./components/ItemDetailContainer/ItemDetailContainer";
+import {CartContext} from "./components/context/CartContext"
 function App() {
 
- 
-
+const [cart, setCart] = useState([])
+const agregarAlCarrito = (item) => {
+  setCart([...cart, item])
+}
   return (
 <>
+  <CartContext.Provider value={
+    {
+      cart, agregarAlCarrito}
+      }>
 
   <BrowserRouter>
     <Header/>
@@ -30,6 +38,7 @@ function App() {
     </Routes>
 
   </BrowserRouter>
+  </CartContext.Provider>
 </>
   );
 }
