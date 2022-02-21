@@ -10,15 +10,16 @@ import {CartContext} from "../.././context/CartContext"
 export const CartWidget = () => {
 
 
-    const {cantidadCart} = useContext(CartContext)
+    const {cantidadCart, totalCart} = useContext(CartContext)
 
 
 return (
-<>
 <Link to="/cart">
 <ShoppingCartIcon color="Dark" fontSize="large" />
-<span> {cantidadCart()}</span> 
+<span>{cantidadCart()}</span> 
+<br />
+<span> $ {totalCart()}</span> 
 </Link>
-</>
+
 )
 }

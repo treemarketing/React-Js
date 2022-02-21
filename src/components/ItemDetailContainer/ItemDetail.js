@@ -15,8 +15,8 @@ export const ItemDetail = ({id, nombre, desc, precio, imgRoute, stock, categoria
     const [cantidad, setCantidad] = useState(0)
     // const [cart, setCart] = useState([])  
     // const [products, setProducts] = useState([])
-    const { cart, agregarAlCarrito, isInCart} = useContext(CartContext)
-    console.log(cart)
+    const { agregarAlCarrito, isInCart} = useContext(CartContext)
+   
 
     const handleAgregar = () => {
         if (cantidad === 0) return

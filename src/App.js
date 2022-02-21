@@ -1,40 +1,24 @@
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles/global.scss';
-import { useState } from 'react';
 import { Header } from './components/header'
 import { Stock } from './components/Stock.js'
 import { PokeApi } from './components/poketapi/PokeApi'
 import {ItemListContainer} from './components/ItemListContainer/ItemListContainer';
 import {BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 import {Formulario} from "./components/Form/Form"
+import {Cart} from "./components/cart/Cart"
 import {ItemDetailContainer } from "./components/ItemDetailContainer/ItemDetailContainer";
-import {CartContext} from "./components/context/CartContext"
+import {CartProvider} from "./components/context/CartContext"
 function App() {
 
-const [cart, setCart] = useState([])
 
-const agregarAlCarrito = (item) => {
-  setCart([...cart, item])
-}
-
-///some retorna true o false en cambio find retorna el elemento
-
-const isInCart = (id) => {
-  return cart.some((prod) => prod.id ===id)
-}
-
-const cantidadCart = () => {
-  return cart.reduce((acc, prod) => acc + prod.cantidad, 0)
-}
 
 
   return (
 <>
-  <CartContext.Provider value={
-    {
-      cart, agregarAlCarrito, isInCart, cantidadCart}
-      }>
+  <CartProvider>
+    
 
   <BrowserRouter>
     <Header/>
@@ -47,11 +31,12 @@ const cantidadCart = () => {
       <Route path="/pokemon" element={ <PokeApi/> }/>
       <Route path="*" element={ <Navigate to = "/"/> }/>
       <Route path="/contacto" element={ <Formulario/> }/>
+      <Route path="/cart" element={ <Cart/> }/>
       
     </Routes>
 
   </BrowserRouter>
-  </CartContext.Provider>
+  </CartProvider>
 </>
   );
 }
