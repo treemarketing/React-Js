@@ -58,7 +58,7 @@ export const ItemDetail = ({id, nombre, desc, precio, imgRoute, stock, categoria
             <ItemCount max={stock} counter={cantidad} setCounter={setCantidad} handleAgregar={handleAgregar} />
             <hr />
             <div className="d-grid gap-2 col-4 mx-auto">
-            <Button variant="warning" onClick={handleAgregar}>Agregar al carrito</Button>
+            <Button variant="warning" onClick={handleAgregar} disabled={cantidad ===0}>Agregar al carrito</Button>
             </div>
             </>
         }

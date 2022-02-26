@@ -17,39 +17,39 @@ export const ItemListContainer = () => {
     
     useEffect( () => {
         setLoading(true)
-//armo refencia y la inserto en la variable
-//         const productosRef = collection(db, "productos")
+//armo refencia y la inserto en la variable importo getDocs y collection
+        const productosRef = collection(db, "productos")
+//obtengo una collecion sin filtro 
+getDocs(productosRef)
+        .then((resp) => {
+        setProductos(resp.docs.map((doc) =>{
+            return {
+                id: doc.id,
+                ...doc.data()
+            }
+        })) 
+    })
+        .finally(() =>{
+            setLoading(false)
+        } )
 
-// getDocs(productosRef)
-//         .then((resp) => {
-//         setProductos(resp.docs.map((doc) =>{
-//             return {
-//                 id: doc.id,
-//                 ...doc.data()
-//             }
-//         })) 
-//     })
-//         .finally(() =>{
-//             setLoading(false)
-//         } )
-
-         pedirDatos()
+        //  pedirDatos()
         
-            .then((res) => {
-                console.log(res)
-                if(catId) {
-                    const filtrados = res.filter(el => el.categoria === catId );
-                    setProductos(filtrados)
-                } else {
-                    setProductos(res)
-                }
-            })
-            .catch((err) => {
-                console.log(err)
-            })
-            .finally(() => {
-               setLoading(false)
-            })
+        //     .then((res) => {
+        //         console.log(res)
+        //         if(catId) {
+        //             const filtrados = res.filter(el => el.categoria === catId );
+        //             setProductos(filtrados)
+        //         } else {
+        //             setProductos(res)
+        //         }
+        //     })
+        //     .catch((err) => {
+        //         console.log(err)
+        //     })
+        //     .finally(() => {
+        //        setLoading(false)
+        //     })
 
     }, [catId])
 console.log(productos)

@@ -1,9 +1,13 @@
-.cartWidget{
-    display:flex;
-    align-items:center;
+.cart-widget{
+    display:block;
+    color: white;
+    visibility:visible;
+    opacity:1;
+    transition: all .5s ease-in-out;
 }
 
 
-.card-hidden{
+.cart-hidden{
 visibility: hidden;
+opacity: 0;
 }

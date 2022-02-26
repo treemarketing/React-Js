@@ -19,10 +19,9 @@ const handleRestar = () => {
 //se cambia de color segun esta en 0 
     return(
 <div className="contador">
-<Button  variant={counter === min ? "dark" : "light"} onClick={handleRestar}>-</Button> 
+<Button  variant={counter === min ? "dark" : "light"} onClick={handleRestar} disabled={counter ===min}>-</Button> 
 <span className="mx-4">{counter}</span>
-<Button variant="light" onClick={handleSumar}>+</Button> 
-
+<Button variant="light" onClick={handleSumar} disabled={counter ===max}>+</Button> 
 
 </div>
 
