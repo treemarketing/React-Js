@@ -21,7 +21,7 @@ export const ItemDetail = ({id, nombre, desc, precio, imgRoute, stock, categoria
     const handleAgregar = () => {
         if (cantidad === 0) return
         if (!isInCart(id)){
-        const addItem =  {id, precio, nombre, stock, cantidad}
+        const addItem =  {id, precio, nombre, stock, cantidad, imgRoute}
 
         agregarAlCarrito(addItem)
         }
