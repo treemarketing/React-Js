@@ -2,12 +2,13 @@ import { useContext } from "react"
 import { CartContext } from "../context/CartContext"
 import DeleteForeverIcon from '@mui/icons-material/DeleteForever';
 import "./cart.scss"
+import {Link} from "react-router-dom"
 
 
 
 export const Cart = () => {
 
-    const {cart, totalCart, vaciarCart, eliminarItem} = useContext(CartContext)
+    const {cart, totalCart, vaciarCart, eliminarItem,isInCart} = useContext(CartContext)
 
     return (
     <div className="carritoContainer">
@@ -51,12 +52,22 @@ export const Cart = () => {
             ))
         }
         <hr/>
-
+        
         <h2>Total $ {totalCart()} </h2>
 
         <div className="my-2">
         <button className="btn btn-danger" onClick={vaciarCart}>Vaciar Carrito</button>
-        <button className="btn btn-success mx-2" >Terminar Mi Compra</button>
+        {
+            totalCart() !==0
+            ?
+            <Link to={"/pago"} className="btn btn-success my-3" disabled={cart.length ===0}>Terminar Mi Compra</Link>
+            :<>
+            <Link to={"/"} className="btn btn-success my-3" disabled={cart.length !== 0}>Segui Comprando</Link>
+            </>
+        }
+
+
+        {/* <Link to="/Checkout"><button className="btn btn-success mx-2" disabled={cart.length ===0}>Terminar Mi Compra</button></Link> */}
         </div>
     </div>
     )

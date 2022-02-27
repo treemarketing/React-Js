@@ -7,6 +7,7 @@ import { PokeApi } from './components/poketapi/PokeApi'
 import {ItemListContainer} from './components/ItemListContainer/ItemListContainer';
 import {BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 import {Formulario} from "./components/Form/Form"
+import {Checkout} from "./components/Checkout/Checkout"
 import {Cart} from "./components/cart/Cart"
 import {ItemDetailContainer } from "./components/ItemDetailContainer/ItemDetailContainer";
 import {CartProvider} from "./components/context/CartContext"
@@ -31,7 +32,9 @@ function App() {
       <Route path="/pokemon" element={ <PokeApi/> }/>
       <Route path="*" element={ <Navigate to = "/"/> }/>
       <Route path="/contacto" element={ <Formulario/> }/>
+      <Route path="/pago" element={ <Checkout/> }/>
       <Route path="/cart" element={ <Cart/> }/>
+      
       
     </Routes>
 
