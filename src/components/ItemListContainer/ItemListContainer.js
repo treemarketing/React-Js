@@ -3,6 +3,7 @@ import {ItemList} from './itemList';
 import {useParams } from 'react-router-dom';
 import { getDocs, collection, query, where } from 'firebase/firestore';
 import { db } from '../firebase/config';
+import StickyFooter from '../Footer/StickyFooter';
 
 
 export const ItemListContainer = () => {
@@ -62,6 +63,7 @@ getDocs(q)
                     ? <h2>Cargando..</h2> 
                     : <ItemList productos={productos}/>
             } 
-        </>
+           <StickyFooter/>
+        </>   
     )
 }
