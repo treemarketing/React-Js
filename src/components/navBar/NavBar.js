@@ -25,6 +25,7 @@ return (
           <NavDropdown.Item href='/productos/combos'>Combos</NavDropdown.Item>
         </NavDropdown>
         <Nav.Link href="/productos2">prueba productos</Nav.Link>
+        <Nav.Link href="/oferta">solo ofertas</Nav.Link>
     </Nav>
     <CartWidget />
     </Container>

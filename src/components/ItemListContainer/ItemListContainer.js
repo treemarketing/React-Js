@@ -13,6 +13,7 @@ export const ItemListContainer = () => {
     const [loading, setLoading] = useState(false);
 
     const { catId } = useParams();
+
    
 
     
@@ -21,6 +22,8 @@ export const ItemListContainer = () => {
 //armo refencia y la inserto en la variable importo getDocs y collection
         const productosRef = collection(db, "productos")
         const q = catId ? query(productosRef, where("categoria","==", catId)) : productosRef
+
+        
 //obtengo una collecion sin filtro 
 getDocs(q)
         .then((resp) => {

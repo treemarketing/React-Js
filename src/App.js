@@ -27,6 +27,7 @@ function App() {
     <Routes>
       <Route path="/" element={ <ItemListContainer/>}/>
       <Route path="/productos/:catId" element={ <ItemListContainer/>}/>
+      <Route path="/oferta/:ofer" element={ <ItemListContainer/>}/>
       <Route path="/productos2" element={ <Stock/> }/>
       <Route path="/detalle/:itemId" element={ <ItemDetailContainer/>}/>
       <Route path="/pokemon" element={ <PokeApi/> }/>
