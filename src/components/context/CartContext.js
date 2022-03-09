@@ -27,7 +27,8 @@ export const CartProvider = ({children}) => {
       return cart.reduce((acc, prod) => acc + prod.cantidad*prod.precio, 0)
     }
     const vaciarCart = () => {
-      return setCart([])
+       setCart([])
+       localStorage.clear()
     }
     const eliminarItem = (id) => {
       return setCart(cart.filter((prod) => prod.id !== id))

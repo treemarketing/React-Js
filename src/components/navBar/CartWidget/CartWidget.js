@@ -16,7 +16,7 @@ export const CartWidget = () => {
 return (
 <Link to="/cart" className={cart.length === 0 ? "cart-widget cart-hidden" :"cart.widget" }>
 <ShoppingCartIcon color="Dark" fontSize="large" />
-<span>Cantidad:{cantidadCart()}</span> 
+<span className="cart-cantidad">{cantidadCart()}</span> 
 <br />
 <span> Total: $ {totalCart()}</span> 
 </Link>

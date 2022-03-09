@@ -23,9 +23,9 @@ return (
           <NavDropdown.Item href='/productos/empanadas'>Empanadas</NavDropdown.Item>
           <NavDropdown.Divider />
           <NavDropdown.Item href='/productos/combos'>Combos</NavDropdown.Item>
+          <NavDropdown.Item href='/oferta/'>Oferta</NavDropdown.Item>
         </NavDropdown>
         <Nav.Link href="/productos2">prueba productos</Nav.Link>
-        <Nav.Link href="/oferta">solo ofertas</Nav.Link>
     </Nav>
     <CartWidget />
     </Container>
