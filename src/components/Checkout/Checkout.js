@@ -1,12 +1,10 @@
-import { useContext, useState } from "react"
+import { useContext } from "react"
 import {CartContext} from "../context/CartContext"
 import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
 import {Navigate} from 'react-router-dom'
-import { collection, addDoc } from "firebase/firestore"
-import { db } from "../firebase/config"
 import { useForm } from "../hooks/useForm"
-import { Link } from "react-router-dom"
+
 
 
 
@@ -133,7 +131,8 @@ if (cart.length === 0){
 
 
 if (orderid){
-return<h2>su id de compra es {orderid} <button type="button" className="btn btn-danger" onClick={vaciarCart} >Volver</button></h2>
+return <div className="mb-2"><h2>su id de compra es {orderid} </h2> <Button variant="primary" size="lg" onClick={vaciarCart}>
+Regresar</Button></div>
 } 
 
 
@@ -183,7 +182,7 @@ return(
                     </div>
             } 
             <span></span>
-            {response && <h2>Su compra se ha realizado correctamente   </h2> }
+            {response && <h2>Su compra ha sido procesada </h2> }
             
     </div>
 

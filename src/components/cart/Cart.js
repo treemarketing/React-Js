@@ -8,7 +8,25 @@ import {Link} from "react-router-dom"
 
 export const Cart = () => {
 
-    const {cart, totalCart, vaciarCart, eliminarItem,isInCart} = useContext(CartContext)
+    const {cart, totalCart, vaciarCart, eliminarItem, setCart} = useContext(CartContext)
+    //reutilizo el cart context agrego setcart para utilizar los botones + y -
+    const resta = id => {
+      cart.forEach(item => {
+        if (item.id === id){
+          item.cantidad === 1 ? item.cantidad = 1:
+         item.cantidad -=1
+        }
+        setCart([...cart])
+      })
+    }
+    const suma = id => {
+      cart.forEach(item => {
+        if (item.id === id){
+         item.cantidad +=1
+        }
+        setCart([...cart])
+      })
+    }
 
     return (
     <div className="carritoContainer">
@@ -39,7 +57,8 @@ export const Cart = () => {
     <tr>
       <td>{item.nombre}</td>
       <td>$ {item.precio * item.cantidad}</td>
-      <td>{item.cantidad}</td>
+      <td><button type="button" onClick={() => resta(item.id)}  className="btn btn-outline-warning" >-</button> {item.cantidad} <button type="button" className="btn btn-outline-warning" onClick={() => suma(item.id)} >+</button></td>
+      
       <td><button className="btn btn-warning d-flex gap-2 col-2 mx-auto" onClick={() => eliminarItem(item.id)}><DeleteForeverIcon /></button></td>
       
     </tr>
@@ -56,7 +75,7 @@ export const Cart = () => {
         <h2>Total $ {totalCart()} </h2>
 
         <div className="my-2">
-        <button className="btn btn-danger" onClick={vaciarCart}>Vaciar Carrito</button>
+        <button className="btn btn-danger" disabled={cart.length ===0} onClick={vaciarCart}>Vaciar Carrito</button>
         {
             totalCart() !==0
             ?
@@ -65,9 +84,6 @@ export const Cart = () => {
             <Link to={"/"} className="btn btn-success my-3" disabled={cart.length !== 0}>Segui Comprando</Link>
             </>
         }
-
-
-        {/* <Link to="/Checkout"><button className="btn btn-success mx-2" disabled={cart.length ===0}>Terminar Mi Compra</button></Link> */}
         </div>
     </div>
     )

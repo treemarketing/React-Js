@@ -2,11 +2,7 @@ import {useState} from 'react'
 import { helpHttp } from '../helpers/helpHttp';
 import { useContext} from "react"
 import {CartContext} from "../context/CartContext"
-import { db } from '../firebase/config';
-import { collection, addDoc, Timestamp } from 'firebase/firestore';
-import { Link, Navigate } from 'react-router-dom';
-
-
+import { generarOrden } from '../firebase/generarOrden';
 
 
 
@@ -63,52 +59,63 @@ const handleSubmit = (e) => {
         return;
     }
 };
-const {cart, totalCart, vaciarCart} = useContext(CartContext)
-const generarOrden = () => {
-    const orden = {
-      comprador: form,
-      items: cart,
-      total: totalCart(),
-      fyh: Timestamp.fromDate(new Date()),
+const {cart, totalCart} = useContext(CartContext)
+
+
+
+
+        //hago otro handle submit para actualizar la base de datos de firebase
+  
+        const handleSubmitCheckout = (e) => {
+            e.preventDefault();
+            setErrors(validateForm(form))
+            if(Object.keys(errors).length === 0) {
+             alert("Enviando Formulario") 
+             setLoading(true)
+             //se simplifico la funcion 
+             generarOrden(form, cart, totalCart, setOrderid)
+             
+            
+             setLoading(false)
+             setResponse(true)
+             setForm(initalForm)
+            setTimeout(() =>setResponse(false),8000)    
+            
+            }else{
+                return;
+            }
+    return (
+      <div>generarOrden</div>
+    )
   }
 
- 
-    const ordenRef = collection(db, "orden")
-    addDoc(ordenRef, orden)
-    .then((doc) => {
-      setOrderid(doc.id)
-    
-    })
-    .catch((err) => {
-        console.log(err)
-    })
-    
-}
-
-
-      
-
-      const handleSubmitCheckout = (e) => {
-        e.preventDefault();
-        setErrors(validateForm(form))
-        if(Object.keys(errors).length === 0) {
-         alert("Enviando Formulario") 
-         setLoading(true)
-         generarOrden()
-         
-        
-         setLoading(false)
-         setResponse(true)
-         setForm(initalForm)
-        setTimeout(() =>setResponse(false),8000)    
-        
-        }else{
-            return;
-        }
-    };
-
-
-
   return {
-    form,errors,loading,response,orderid,handleChange,handleBlur,handleSubmit,handleSubmitCheckout};
+    form,errors,loading,response,orderid,handleChange,handleBlur,handleSubmit, handleSubmitCheckout};
 }
+
+
+
+//COMO ACTUALIZAR PRODUCTO Y GENERAR ORDEN 
+
+// addDoc(ordenRef, orden)
+// .then((res) => {
+//     //hago que cada uno de los productos del carrito sean actualizados en la base de datos con su nuevo stock
+//     cart.forEach((item) => {
+//         const docRef = doc(db, "productos", item.id)
+//         getDoc(docRef)
+//         .then((dbDoc) => {
+//             if(dbDoc.data().stock >= item.cantidad){
+//             updateDoc(docRef, {stock: dbDoc.data().stock - item.cantidad})
+//         }else { alert("No queda stock de la cantidad elegida")}
+//         //de todas formas el contador no permite que se agreguen mas del stock
+//         })
+//     })
+
+
+
+//   setOrderid(res.id)
+
+// })
+// .catch((err) => {
+//     console.log(err)
+// })
