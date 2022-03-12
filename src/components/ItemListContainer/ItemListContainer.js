@@ -3,7 +3,6 @@ import {ItemList} from './itemList';
 import {useParams } from 'react-router-dom';
 import { getDocs, collection, query, where } from 'firebase/firestore';
 import { db } from '../firebase/config';
-import Button from '@mui/material/Button';
 import StickyFooter from '../Footer/StickyFooter';
 import './spiner.scss'
 
@@ -18,7 +17,6 @@ export const ItemListContainer = () => {
     const { catId } = useParams();
   
 
-   console.log(productos.filter(p => p.oferta === true))
    
 
     useEffect( () => {
@@ -77,7 +75,7 @@ getDocs(q)
         //     })
 
     }, [catId])
-
+    
 
     return (
         <>
@@ -88,8 +86,8 @@ getDocs(q)
                     <span className="visually-hidden">Cargando...</span>
                   </div>
                   </div>
-                    :<ItemList productos={productos}/>
- 
+                    :
+                    <ItemList productos={productos}/>
             } 
 
            <StickyFooter/>

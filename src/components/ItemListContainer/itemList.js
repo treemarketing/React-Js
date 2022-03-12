@@ -1,12 +1,13 @@
 import {Item} from "./item"
 import Row from 'react-bootstrap/Row'
-import Form from 'react-bootstrap/Form'
+
 
 
 
 
 //defino products para mapear y exporto el listado
 export const ItemList = ( {productos} ) => {
+  
 
 
     return(
@@ -14,11 +15,7 @@ export const ItemList = ( {productos} ) => {
        <div>   
       
         <h2>Elegí entre nuestros {productos.length} productos</h2>
-        <Form.Check
-    type="switch"
-    id="disabled-custom-switch"
-    label="Productos en Oferta"
-  />
+        {/* <button type="button" onClick={() =>  <Item key={ofertaFilter}/> } className="btn btn-outline-warning" >OFERTAS</button> */}
 
     <Row  md={3} className="g-4">
         
