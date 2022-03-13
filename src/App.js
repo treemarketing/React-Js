@@ -24,14 +24,14 @@ function App() {
     <Header/>
 
     <Routes>
-      <Route path="/" element={ <ItemListContainer/>}/>
-      <Route path="/productos/:catId" element={ <ItemListContainer/>}/>
-      <Route path="/detalle/:itemId" element={ <ItemDetailContainer/>}/>
-      <Route path="/pokemon" element={ <PokeApi/> }/>
-      <Route path="*" element={ <Navigate to = "/"/> }/>
-      <Route path="/contacto" element={ <ContactForm/> }/>
-      <Route path="/pago" element={ <Checkout/> }/>
-      <Route path="/cart" element={ <Cart/> }/>
+      <Route exact path="/" element={ <ItemListContainer/>}/>
+      <Route exact path="/productos/:catId" element={ <ItemListContainer/>}/>
+      <Route exact path="/detalle/:itemId" element={ <ItemDetailContainer/>}/>
+      <Route exact path="/pokemon" element={ <PokeApi/> }/>
+      <Route exact path="*" element={ <Navigate to = "/"/> }/>
+      <Route exact path="/contacto" element={ <ContactForm/> }/>
+      <Route exact path="/pago" element={ <Checkout/> }/>
+      <Route exact path="/cart" element={ <Cart/> }/>
       
       
     </Routes>
