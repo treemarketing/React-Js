@@ -1,3 +1,17 @@
 .logo{
     width:10%;
 }
+
+.navBarDown{
+    background-color: black;
+}
+
+.navbar-expand .navbar-nav .dropdown-menu {
+    position: absolute;
+    background-color: black;
+}
+
+.active{
+    color:#fee600;
+    font-weight: bold;
+}
