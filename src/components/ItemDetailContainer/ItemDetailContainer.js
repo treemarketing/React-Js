@@ -1,5 +1,5 @@
 import {useEffect, useState} from 'react';
-import {useParams, Navigate, useLocation } from 'react-router-dom';
+import {useParams} from 'react-router-dom';
 import { ItemDetail } from "./ItemDetail";
 import { getDoc, doc} from 'firebase/firestore';
 import { db } from '../firebase/config';
@@ -48,7 +48,7 @@ getDoc(docRef)
 
 
 
-     let location = useLocation()
+
     
 
 

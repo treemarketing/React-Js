@@ -2,7 +2,7 @@
   "name": "proyecto-coder",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://treemarketing.github.io/React-Js",
+  "homepage": "https://treemarketing.github.io/React-Js/",
   "dependencies": {
     "@emotion/react": "^11.7.1",
     "@emotion/styled": "^11.6.0",
