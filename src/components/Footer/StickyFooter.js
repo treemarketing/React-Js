@@ -19,27 +19,23 @@ function Copyright() {
 
 export default function StickyFooter() {
   return (
-    <Box
-      sx={{
-        display: 'flex',
-        flexDirection: 'column',
-        minHeight: '10vh',
-      }}
+    <Box minWidth="30rem"
     >
      
       <Box
         component="footer"
         sx={{
           py: 3,
-          px: 2,
+          px: 3,
           mt: 'auto',
+          width:"auto",
           backgroundColor: (theme) =>
             theme.palette.mode === 'dark'
               ? theme.palette.grey[200]
               : theme.palette.grey[800],
         }}
       >
-        <Container maxWidth="sm">
+        <Container maxWidth="xl">
           <Typography variant="body1">
             Proyecto Coder House
           </Typography>
@@ -47,5 +43,8 @@ export default function StickyFooter() {
         </Container>
       </Box>
     </Box>
+  
+  
+  
   );
 }

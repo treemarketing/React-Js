@@ -4,7 +4,7 @@ import './styles/global.scss';
 import { Header } from './components/header'
 import { PokeApi } from './components/poketapi/PokeApi'
 import {ItemListContainer} from './components/ItemListContainer/ItemListContainer';
-import {BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
+import { Routes, Route, Navigate } from 'react-router-dom'
 import {Checkout} from "./components/Checkout/Checkout"
 import {Cart} from "./components/cart/Cart"
 import {ItemDetailContainer } from "./components/ItemDetailContainer/ItemDetailContainer";

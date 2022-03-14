@@ -17,7 +17,7 @@ export const ItemList = ( {productos} ) => {
         <h2>Elegí entre nuestros {productos.length} productos</h2>
         {/* <button type="button" onClick={() =>  <Item key={ofertaFilter}/> } className="btn btn-outline-warning" >OFERTAS</button> */}
 
-    <Row  md={3} className="g-4">
+    <Row   className="row row-cols-auto g-4 justify-content-md-center">
         
     {productos.length ? (
      productos.map( (el) => <Item key={el.id} {...el} />) 
