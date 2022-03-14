@@ -1,5 +1,5 @@
 .logo{
-    width:10%;
+    width:200px;
 }
 
 .navBarDown{
@@ -9,6 +9,15 @@
 .navbar-expand .navbar-nav .dropdown-menu {
     position: absolute;
     background-color: black;
+    :focus{
+        background-color:#ff2b37;
+    }
+    :hover{
+        background-color:#ff2b37;
+    }
+    :active{
+        color:#fee600;
+    }
 }
 
 .active{

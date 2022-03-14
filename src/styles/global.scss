@@ -19,6 +19,10 @@ ol li{
 a {
     text-decoration: none;
     color:white;
+    :hover{
+        color: $color-llamada;
+        transition: 2s;
+    }
     
 }
 
@@ -43,10 +47,7 @@ a {
 
 // le doy formato al cards de boostrap
 
-    .navBar{
-        background-color: $color-bg;
-        display: flex;
-    }
+
     
     .contador{
         text-align: center;

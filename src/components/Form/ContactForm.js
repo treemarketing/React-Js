@@ -56,7 +56,7 @@ const ContactForm = () => {
     {errors.name&&<p>{errors.tel}</p>}
     <textarea cols="50" rows="5" name="comments" placeholder="Escribe tus comentarios" onBlur={handleBlur} onChange={handleChange} value={form.comments} required />
     {errors.name&&<p>{errors.comments}</p>}
-    <input type="submit" value="enviar"/>
+    <input type="submit" className="submit" value="enviar"/>
 
     </form>
             {
