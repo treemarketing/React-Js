@@ -2,25 +2,113 @@
     width:200px;
 }
 
-.navBarDown{
-    background-color: black;
+header{
+    position:sticky;
+    width: 100%;
+}
+.nav{
+    background-color:#ff2b37;
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid white;
+
+    &-link{
+        color:white;
+        :hover{
+            color:#fee600;
+        }
+        :focus{
+            color:#fee600;
+        }
+    }
 }
 
-.navbar-expand .navbar-nav .dropdown-menu {
-    position: absolute;
-    background-color: black;
-    :focus{
-        background-color:#ff2b37;
-    }
-    :hover{
-        background-color:#ff2b37;
-    }
-    :active{
-        color:#fee600;
-    }
+
+.navMenu{
+            padding-inline-start: 0px;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            list-style-type: none;
+            font-size: 20px;
+            background-color:black;
+            padding: 10px;
+
+            li{
+                
+                margin: 10px;
+                padding: 4px;
+                transition: 2s;
+                a{
+                    display: block;
+                    color: white;
+                    
+                }
+                :hover{
+                    color:#fee600;
+                }
+                :focus{
+                    color:#fee600;
+                }
+}
 }
 
+
+.navMenuDerecha{
+    display: flex;
+    align-items: flex-end;
+        ul{
+            padding-left: 0px;
+            display: flex;
+            list-style-type: none;
+            font-size: 30px;
+        :hover{
+            transform: rotate(360deg);
+        }
+        li{
+         margin: 5px;
+         :hover{
+            color: #fee600;
+        }
+            a{
+                color: black;
+                :hover{
+                    color: #fee600;
+                }
+            }
+        }
+        }
+    }
 .active{
     color:#fee600;
     font-weight: bold;
+}
+
+.dropdown .nav-item{
+    &-item{background-color: black;
+        :hover{
+            color:#ff2b37;
+        }
+}
+}
+.dropdown-menu.show {
+    background-color: black;
+    :hover{
+        background-color:#ff2b37;
+    }
+}
+
+
+@media only screen and (min-width: 250px) and (max-width: 500px){
+    
+    html{
+        font-size:8px;
+    }
+}
+
+@media only screen and (min-width: 500px) and (max-width: 900px){
+    
+    html{
+        font-size:12px;
+    }
 }

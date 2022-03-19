@@ -90,7 +90,8 @@ getDocs(q)
                     <ItemList productos={productos}/>
             } 
 
-           <StickyFooter/>
+<StickyFooter/>
+
         </>   
     )
 }

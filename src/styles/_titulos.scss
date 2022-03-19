@@ -3,6 +3,12 @@
 *{
     font-family: 'Luckiest Guy', cursive; 
 }
+a {
+    text-decoration: none;
+    :hover{
+        color: white;
+    }
+}
 
 @mixin font ($color, $size, $align){
 color: $color;
@@ -38,3 +44,5 @@ p{
 .contacto--nombre .contacto--email .contacto--mensaje {
     font-size: 2em;
 }
+
+

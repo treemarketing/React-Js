@@ -19,6 +19,7 @@ function Copyright() {
 
 export default function StickyFooter() {
   return (
+    <div className="sticky_footer">
     <Box minWidth="30rem"
     >
      
@@ -43,7 +44,7 @@ export default function StickyFooter() {
         </Container>
       </Box>
     </Box>
-  
+    </div>
   
   
   );

@@ -11,36 +11,55 @@ import {ItemDetailContainer } from "./components/ItemDetailContainer/ItemDetailC
 import {CartProvider} from "./components/context/CartContext"
 import ContactForm from "./components/Form/ContactForm"
 import { HashRouter } from 'react-router-dom';
+import { Ordenes } from './components/ordenes/Ordenes';
+import { Logueo } from './components/usuario/Logueo';
+
+
+
 function App() {
+
+
+
 
 
 
 
   return (
 <>
+
+      
+
   <CartProvider>
     
    
+      
   <HashRouter>
     <Header/>
 
     <Routes>
-
       <Route path="/" element={ <ItemListContainer/>}/>
-      <Route exact path="/productos/:catId" element={ <ItemListContainer/>}/>
-      <Route exact path="/detalle/:itemId" element={ <ItemDetailContainer/>}/>
-      <Route exact path="/pokemon" element={ <PokeApi/> }/>
+      <Route path="/productos/:catId" element={ <ItemListContainer/>}/>
+      <Route path="/detalle/:itemId" element={ <ItemDetailContainer/>}/>
+      <Route path="/pokemon" element={ <PokeApi/> }/>
       <Route path="*" element={ <Navigate to = "/"/> }/>
-      <Route exact path="/contacto" element={ <ContactForm/> }/>
-      <Route exact path="/pago" element={ <Checkout/> }/>
-      <Route exact path="/cart" element={ <Cart/> }/>
-   
+      <Route path="/contacto" element={ <ContactForm/> }/>
+      <Route path="/pago" element={ <Checkout/> }/>
+      <Route path="/cart" element={ <Cart/> }/>
+      
+      <Route path="/ordenes" element={ <Ordenes/> }/>
+      <Route path="/logueo" element={ <Logueo/> }/>
+    
+      
+      
       
     </Routes>
     </HashRouter>
     
+      
     
   </CartProvider>
+
+      
 </>
   );
 }

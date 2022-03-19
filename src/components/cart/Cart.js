@@ -44,7 +44,7 @@ export const Cart = () => {
                     <button className="btn btn-warning d-flex gap-2 col-1 mx-auto" onClick={() => eliminarItem(item.id)}><DeleteForeverIcon /></button> */}
 
 
-                    <table class="table table-dark table-hover text-center">
+                    <table className="table table-dark table-hover text-center">
   <thead>
     <tr>
       <th scope="col">Productos</th>
