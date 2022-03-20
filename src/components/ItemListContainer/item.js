@@ -11,7 +11,7 @@ export const Item = ({id,nombre,desc,precio,imgRoute,categoria, oferta }) => {
 
     return( 
         <section>
-           <Card style={{ width: '40rem' }}>
+           <Card className="card" >
   <Card.Img variant="top" src={imgRoute} />
   <Card.Body>
   <Card.Title as="h5">Categoria: {categoria}</Card.Title>

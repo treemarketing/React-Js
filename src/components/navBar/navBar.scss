@@ -92,13 +92,17 @@ header{
 }
 }
 .dropdown-menu.show {
+    
+   display:contents;
     background-color: black;
     :hover{
         background-color:#ff2b37;
     }
 }
 
-
+.dropdown-item{
+    font-size: 2rem;
+}
 @media only screen and (min-width: 250px) and (max-width: 500px){
     
     html{

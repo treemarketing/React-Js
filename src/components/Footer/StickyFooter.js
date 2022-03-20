@@ -20,7 +20,7 @@ function Copyright() {
 export default function StickyFooter() {
   return (
     <div className="sticky_footer">
-    <Box minWidth="30rem"
+    <Box width="100%"
     >
      
       <Box
